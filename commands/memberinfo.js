@@ -7,7 +7,7 @@ module.exports.run = async (bot, message, args) => {
     let member = message.mentions.members.first() || message.guild.members.cache.get(userArgs[0]) || message.guild.members.cache.find(x => x.user.username.toLowerCase() === userArgs.slice(0).join(" ") || x.user.username === userArgs[0]) || message.member;
 
     if (member.presence.status === 'dnd') member.presence.status = 'Non disturbare';
-    if (member.presence.satus === 'online') member.presence.status = 'Online';
+    if (member.presence.status === 'online') member.presence.status = 'Online';
     if (member.presence.status === 'idle') member.presence.status = 'Idle';
     if (member.presence.status === 'offline') member.presence.status = 'Offline';
 
